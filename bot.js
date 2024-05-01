@@ -68,7 +68,7 @@ bot.on('callback_query', (callbackQuery) => {
     const data = callbackQuery.data;
 
     if (data === 'fr') {
-        const video_fr = 'https://t.me/lacasadepapelallsaison/158';
+        const video_fr = 'https://t.me/gsgzheh/3';
         const welcomeText_fr = "Bonjour! Avant d'utiliser ce bot, veuillez créer un compte authentique sinon vous risquez de perdre beaucoup. Veuillez regarder la vidéo ci-dessous pour en savoir plus, puis cliquez sur suivant✅️ pour continuer :";
         bot.sendMessage(chatId, welcomeText_fr)
             .then(() => {
@@ -81,7 +81,7 @@ bot.on('callback_query', (callbackQuery) => {
                 });
             });
     } else if (data === 'en') {
-        const video_en = 'https://example.com/video_en';
+        const video_en = 'https://t.me/gsgzheh/3';
         const welcomeText_en = "Welcome! Before using this bot, please create an authentic account otherwise you will lose a lot. Please watch the video below to learn more, then click on NEXT✅️ to continue :";
         bot.sendMessage(chatId, welcomeText_en)
             .then(() => {
@@ -94,7 +94,7 @@ bot.on('callback_query', (callbackQuery) => {
                 });
             });
     } else if (data === 'ar') {
-        const video_ar = 'https://example.com/video_ar';
+        const video_ar = 'https://t.me/gsgzheh/3';
         const welcomeText_ar = "مرحبًا! قبل استخدام هذا الروبوت، يرجى إنشاء حساب أصيل آخر خسارة. يرجى مشاهدة الفيديو أدناه لمعرفة المزيد، ثم انقر على التالي✅️ للمتابعة :";
         bot.sendMessage(chatId, welcomeText_ar)
             .then(() => {
@@ -139,9 +139,9 @@ bot.onText(/^[0-9]{9}$/, (msg) => {
         sendSequenceToChannel(chatId);
     } else {
         const lang = getUserLanguage(chatId);
-        const message = lang === 'fr' ? 'ID refusé ❌. Veuillez créer un nouveau compte avec le code promo Free441 et réessayez.'
-                      : lang === 'en' ? 'ID refused ❌. Please create a new account with promo code Free441 and try again.'
-                      : 'الهوية مرفوضة ❌. الرجاء إنشاء حساب جديد بالرمز الترويجي Free441 والمحاولة مرة أخرى.';
+        const message = lang === 'fr' ? 'ID refusé ❌. Veuillez créer un nouveau compte avec le code promo Free221 et réessayez.'
+                      : lang === 'en' ? 'ID refused ❌. Please create a new account with promo code Free221 and try again.'
+                      : 'الهوية مرفوضة ❌. الرجاء إنشاء حساب جديد بالرمز الترويجي Free221 والمحاولة مرة أخرى.';
         bot.sendMessage(chatId, message);
     }
 });
