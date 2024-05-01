@@ -31,7 +31,7 @@ ${sequenceTemplate}
 1.54:${generate_sequence()}
 1.23:${generate_sequence()}
 
-🚨 Les signaux fonctionnent uniquement sur LINEBET avec le code promo Free221 ! Ne manquez pas cette opportunité ! ✅️ `;
+🚨 Les signaux fonctionnent uniquement sur LINEBET et avec le code promo Free221 ! ✅️ `;
     
     const options = {
         reply_markup: {
