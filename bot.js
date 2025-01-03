@@ -6,7 +6,7 @@ const bot = new TelegramBot('7038981201:AAHmbzgSCypqPMKVyvId2KFRu9bWaV3ZFkM', { 
 
 // Fonction pour générer une séquence aléatoire
 function generate_sequence() {
-    const sequence = ["🟠", "🟠", "🟠", "🟠", "🍎"];
+    const sequence = ["♦️", "♦️", "♦️", "♦️", "🍏"];
     for (let i = sequence.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [sequence[i], sequence[j]] = [sequence[j], sequence[i]]; // Échanger les éléments
@@ -17,7 +17,7 @@ function generate_sequence() {
 // Modèle de séquence
 const sequenceTemplate = `
 🔔 ENTRÉE CONFIRMÉE !
-🍎 Pomme : 4
+🍏 Pomme : 4
 🔐 Tentatives : 3
 ⏰ Validité : 5 minutes
 `;
@@ -26,7 +26,6 @@ const sequenceTemplate = `
 function sendSequenceToChannel(chatId) {
     const sequenceMessage = `
 ${sequenceTemplate}
-2.41:${generate_sequence()}
 1.93:${generate_sequence()}
 1.54:${generate_sequence()}
 1.23:${generate_sequence()}
@@ -111,7 +110,7 @@ bot.on('callback_query', (callbackQuery) => {
             .then(() => {
                 bot.once('text', (msg) => {
                     const userId = msg.text.trim();
-                    const acceptedIds = [859937999, 999999999];
+                    const acceptedIds = [1000000000, 1999999999];
                     if (acceptedIds.includes(parseInt(userId, 10))) {
                         sendSequenceToChannel(chatId);
                     } else {
@@ -131,11 +130,11 @@ bot.on('callback_query', (callbackQuery) => {
 });
 
 // Validation de l'ID et génération de signal
-bot.onText(/^[0-9]{9}$/, (msg) => {
+bot.onText(/^[0-10]{10}$/, (msg) => {
     const chatId = msg.chat.id;
     const userId = msg.text;
 
-    if (userId >= 859937999 && userId <= 999999999) {
+    if (userId >= 1000000000 && userId <= 1999999999) {
         sendSequenceToChannel(chatId);
     } else {
         const lang = getUserLanguage(chatId);
